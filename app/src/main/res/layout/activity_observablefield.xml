@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="human"
+            type="com.lihang.databindinglover.bean.Human" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{human.name,default = 名字}"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(human.age),default = 0}"
+            />
+
+
+        <Button
+            android:id="@+id/btn_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="改变name"
+            android:onClick="@{onClickListener}"
+            />
+
+        <Button
+            android:id="@+id/btn_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="改变 age"
+            android:onClick="@{onClickListener}"
+            />
+
+    </LinearLayout>
+</layout>

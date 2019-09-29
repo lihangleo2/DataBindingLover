@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_base"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="基本使用"
+                android:onClick="@{onClickListener}"
+                />
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/btn_alis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="import 和 Alis的使用"
+                android:onClick="@{onClickListener}"
+                />
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/btn_recyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="在recyclerView里的使用"
+                android:onClick="@{onClickListener}"
+                />
+
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/btn_baseobservable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="单向数据绑定 -- BaseObservable"
+                android:onClick="@{onClickListener}"
+                />
+
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/btn_observableField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="单向数据绑定 -- ObservableField"
+                android:onClick="@{onClickListener}"
+                />
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/btn_observableCollection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="单向数据绑定 -- ObservableCollection"
+                android:onClick="@{onClickListener}"
+                />
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/btn_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="双向数据绑定"
+                android:onClick="@{onClickListener}"
+                />
+
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/btn_include"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="在include中使用"
+                android:onClick="@{onClickListener}"
+                />
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/btn_viewstub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="在viewStub中使用"
+                android:onClick="@{onClickListener}"
+                />
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/btn_bind_adapter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="BindingAdapter的用法"
+                android:onClick="@{onClickListener}"
+                />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</layout>

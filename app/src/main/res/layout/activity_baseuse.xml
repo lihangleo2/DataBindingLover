@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="MyBinding">
+
+        <variable
+            name="textStr"
+            type="String" />
+
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="onClickUtil"
+            type="com.lihang.databindinglover.utils.OnClickUtil" />
+
+        <import type="com.lihang.databindinglover.utils.OnClickStaticUtil"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:onClick="@{onClickListener}"
+            android:text="@{textStr}"
+            tools:text="中间的" />
+
+<!--        android:onClick="@{onClickUtil::onClickWithMe}"-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:onClick="@{OnClickStaticUtil::onClickWithMe}"
+            android:text="直接在静态类里调用方法"
+            android:layout_above="@+id/btn_class"
+            />
+
+        <Button
+            android:id="@+id/btn_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="@{onClickUtil::onClickWithMe}"
+            android:text="直接调用类里的方法" />
+
+    </RelativeLayout>
+</layout>
